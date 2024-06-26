@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<title>ispit 02072024</title>
+<script src="lib/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="lib/bootstrap.min.css">
+<style>
+  html {
+  font-size: 95%;
+  }
+  body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    background-color: #FFF5EE;
+    /*overflow-x: hidden;*/
+  }
+  .list-group-item.active {
+    background-color: grey;
+    border-color: grey; }
+  button:focus {outline:0 !important;}
+    .btn.btn-custom-sm {
+      border-radius: 0;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+  }
+  .table td, th {
+    text-align: center;
+  } 
+  </style>
+</head>
+
+<body>
+
+  <div class="fixed-top">
+    
+    <div class="alert alert-dark rounded-0" role="alert" style="width:80%;">
+    <h3 style="text-align:center;">Računalna grafika - pismeni ispit 02.07.2024.</h3>
+    </div>
+    
+    <a style="position:absolute;top:0px; right:0px; margin:0; padding:5px 5px;" class="btn btn-secondary btn-sm btn-custom-sm shadow-none" data-bs-toggle="collapse" href="#opis" aria-expanded="false" aria-controls="collapseExample" role="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+      </svg>
+    </a>
+    
+    <div class="collapse" id="opis" style="position: absolute; top: 50px; right:10px; z-index:100;">
+      <div class="card card-body text-bg-warning">
+        <table class="table table-hover table-warning">
+           <thead>
+             <tr>
+               <th scope="col">Ostvareni bodovi</th>
+               <th scope="col">Ocjena</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>0 - 14</td>
+               <td>1</td>
+             </tr>
+             <tr>
+               <td>15 - 18</td>
+               <td>2</td>
+             </tr>
+             <tr>
+               <td>19 - 22</td>
+               <td>3</td>
+             </tr>
+             <tr>
+               <td>23 - 26</td>
+               <td>4</td>
+             </tr>
+             <tr>
+               <td>27 - 30</td>
+               <td>5</td>
+             </tr>
+           </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+<div class="container-fluid">
+
+  <div class="row gy-4" style="margin-top:100px;">
+    
+    <div class="col-md text-center">
+      <div class="sticky-top" style="top: 120px;">
+      <video width="60%" controls loop>
+        <source src="ispit01092022.webm" type="video/webm">
+          Your browser does not support HTML video.
+      </video>
+    </div>
+    </div>
+    
+    <div class="col-md">
+      
+      <div class="accordion" id="bodovanje">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="bodovi1_head">
+           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bodovi1" aria-expanded="true" aria-controls="bodovi1">
+            <span class="badge text-bg-primary">Opis 3D scene i bodovanje</span>
+           </button>
+          </h2>
+        <div id="bodovi1" class="accordion-collapse collapse show" aria-labelledby="bodovi1_head">
+         <div class="accordion-body">
+          <p><span class="badge bg-secondary">3D scena</span></p>
+          <ul>
+            <li>8 kugli koje predstavljaju vrhove kocke. Boja svake kugle je <code>(r,g,b) = (0.93,0.6,0.29)</code>.</li>
+            <li>Svaki od 12 bridova kocke reprezentiran je preko plašta valjka.</li>
+            <li>Jedna od prostornih dijagonali kocke je također reprezentirana preko plašta valjka.</li>
+            <li>Boja svakog brida kocke i prostorne dijagonale je <code>(r,g,b) = (0.4,1,1)</code>.</li>
+            <li>Tri susjedne strane kocke koje imaju zajednički vrh na donjoj bazi kocke.</li>
+            <li>Uočite da je svaka strane kocke izvana obojana bojom <code>(r,g,b) = (0.6,0.6,1)</code>, a iznutra bojom <code>(r,g,b) = (1,0.3,1)</code>.</li>
+            <li>Visina i širana <code>canvas</code> elementa jednake su 600 piksela. Koristite perspektivnu projekciju.</li>
+          </ul>
+          <p><span class="badge bg-secondary">Bodovanje</span></p>
+          <ul>
+            <li>Za prikazivanje ili skrivanje tablice raspona bodova i ocjena kliknite na tipku <span class="badge rounded-pill text-bg-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </svg></span> u gornjem desnom kutu.</li>
+            <li>Za detaljniji opis bodovanja po pojedinim komponentama otvorite donje <i>kartice</i>. Svaku od <i>kartica</i> možete po želji otvoriti ili zatvoriti.</li>
+          </ul>
+          </div>
+        </div>
+       </div>
+
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="bodovi5_head">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bodovi5" aria-expanded="false" aria-controls="bodovi5">
+            <span class="badge text-bg-primary">1. Postavljeni objekti u 3D sceni</span> &emsp;<span class="badge text-bg-danger">Ukupno: 15 bodova</span>
+           </button>
+          </h2>
+        <div id="bodovi5" class="accordion-collapse collapse" aria-labelledby="bodovi5_head">
+         <div class="accordion-body">
+          <ul style="line-height: 2em;">
+            <li>Sve kugle su na odgovarajućim pozicijama. <span class="badge text-bg-success">2 boda</span></li>
+            <li>Svi bridovi kocke su na odgovarajućim pozicijama. <span class="badge text-bg-success">6 bodova</span></li>
+            <li>Prostorna dijagonala kocke je dobro postavljena kako je prikazano u animaciji. <span class="badge text-bg-success">5 bodova</span></li>
+            <li>Tri strane kocke su dobro postavljene kako je prikazano u animaciji. <span class="badge text-bg-success">2 boda</span></li>
+          </ul>
+          </div>
+        
+        </div>
+       </div>
+
+
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="bodovi2_head">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bodovi2" aria-expanded="false" aria-controls="bodovi2">
+            <span class="badge text-bg-primary">2. Svojstva materijala</span> &emsp;<span class="badge text-bg-danger">Ukupno: 6 bodova</span>
+           </button></h2>
+        <div id="bodovi2" class="accordion-collapse collapse" aria-labelledby="bodovi2_head">
+         <div class="accordion-body">
+         <ul style="line-height: 2em;">
+            <li>Kugle su obojane bojom <code>(r,g,b) = (0.93,0.6,0.29)</code>. <span class="badge text-bg-success">1 bod</span></li>
+            <li>Bridovi kocke i prostorna dijagonala su obojani bojom <code>(r,g,b) = (0.4,1,1)</code>. <span class="badge text-bg-success">1 bod</span></li>
+            <li>Tri susjedne strane kocke su izvana obojane bojom <code>(r,g,b) = (0.6,0.6,1)</code>. <span class="badge text-bg-success">2 boda</span></li>
+            <li>Tri susjedne strane kocke su iznutra obojane bojom <code>(r,g,b) = (1,0.3,1)</code>. <span class="badge text-bg-success">2 boda</span></li>
+          </ul>
+        </div>
+       </div>
+     </div>
+
+     <div class="accordion-item">
+          <h2 class="accordion-header" id="bodovi3_head">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bodovi3" aria-expanded="false" aria-controls="bodovi3">
+            <span class="badge text-bg-primary">3. Osvjetljenje</span> &emsp;<span class="badge text-bg-danger">Ukupno: 6 bodova</span>
+           </button></h2>
+        <div id="bodovi3" class="accordion-collapse collapse" aria-labelledby="bodovi3_head">
+         <div class="accordion-body">
+          <ul style="line-height: 2em;">
+            <li>U 3D sceni je postavljen jedan izvor svjetlosti bijele boje. <span class="badge text-bg-success">1 bod</span></li>
+            <li>Na sferama se vidi zrcalna refleksija (<i>bijele točkice</i> u animaciji). <span class="badge text-bg-success">1 bod</span></li>
+            <li>Ispravno osvjetljene tri susjedne strane kocke s vanjske strane. Uočite u animaciji da strane kocke izvana reagiraju na svjetlo, tj. u nekim trenucima su tamnije, u nekim trenucima su svjetlije. <span class="badge text-bg-success">2 boda</span></li>
+            <li>Ispravno osvjetljene tri susjedne strane kocke s unutarnje strane. Uočite u animaciji da strane kocke iznutra reagiraju na svjetlo, tj. u nekim trenucima su tamnije, u nekim trenucima su svjetlije. <span class="badge text-bg-success">2 boda</span></li>
+          </ul>
+        </div>
+       </div>
+     </div>
+
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="bodovi4_head">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bodovi4" aria-expanded="false" aria-controls="bodovi4">
+            <span class="badge text-bg-primary">4. Kamera i animacija</span> &emsp;<span class="badge text-bg-danger">Ukupno: 3 boda</span>
+           </button>
+          </h2>
+        <div id="bodovi4" class="accordion-collapse collapse" aria-labelledby="bodovi4_head">
+         <div class="accordion-body">
+         <ul style="line-height: 2em;">
+            <li>Postavite kameru tako da 3D objekt (<i>kocka</i>) zauzima čitavi <code>canvas</code> element kako je prikazano u animaciji. <span class="badge text-bg-success">2 boda</span></li>
+            <li>Kocka rotira oko pravca koji prolazi kroz središte gornje i donje baze kako je prikazano u animaciji. <span class="badge text-bg-success">1 bod</span></li>
+          </ul>
+          </div>
+        </div>
+       </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
